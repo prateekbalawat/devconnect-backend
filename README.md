@@ -31,7 +31,7 @@
 
 ## Related repositories
 
-- **Frontend**: [reia-frontend](https://github.com/prateekbalawat/reia-frontend)
+- **Frontend**: [devconnect-frontend](https://github.com/prateekbalawat/devconnect-frontend)
 
 ---
 
