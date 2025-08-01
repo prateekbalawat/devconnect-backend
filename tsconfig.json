@@ -9,5 +9,8 @@
     "strict": true,
     "skipLibCheck": true
   },
+  "scripts": {
+    "build": "tsc"
+  },
   "include": ["src"]
 }
