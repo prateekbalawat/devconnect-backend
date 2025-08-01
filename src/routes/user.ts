@@ -126,27 +126,27 @@ const getFollowing = async (req: Request, res: Response) => {
   res.json({ count: user.following.length, following: user.following });
 };
 
-router.get("/:email", (req, res) => {
+router.get("/:email", (req: Request, res: Response) => {
   getUser(req, res);
 });
 
-router.get("/:email/posts", (req, res) => {
+router.get("/:email/posts", (req: Request, res: Response) => {
   getUserPosts(req, res);
 });
 
-router.put("/:email/follow", (req, res) => {
+router.put("/:email/follow", (req: Request, res: Response) => {
   followUser(req, res);
 });
 
-router.put("/:email/unfollow", (req, res) => {
+router.put("/:email/unfollow", (req: Request, res: Response) => {
   unfollowUser(req, res);
 });
 
-router.get("/:email/followers", (req, res) => {
+router.get("/:email/followers", (req: Request, res: Response) => {
   getFollowers(req, res);
 });
 
-router.get("/:email/following", (req, res) => {
+router.get("/:email/following", (req: Request, res: Response) => {
   getFollowing(req, res);
 });
 

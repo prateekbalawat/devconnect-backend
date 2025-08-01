@@ -81,12 +81,12 @@ const handleLogin = async (req: Request, res: Response) => {
   }
 };
 
-router.post("/login", (req, res) => {
+router.post("/login", (req: Request, res: Response) => {
   handleLogin(req, res);
 });
 
 // ✅ No type error now
-router.post("/register", (req, res) => {
+router.post("/register", (req: Request, res: Response) => {
   handleRegister(req, res);
 });
 

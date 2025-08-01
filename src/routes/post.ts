@@ -272,48 +272,57 @@ const getFollowing = async (req: Request, res: Response) => {
   }
 };
 
-router.get("/following/:email", (req, res) => {
+router.get("/following/:email", (req: Request, res: Response) => {
   getFollowing(req, res);
 });
 
-router.post("/", (req, res) => {
+router.post("/", (req: Request, res: Response) => {
   handleCreatePost(req, res);
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", (req: Request, res: Response) => {
   handleUpdatePost(req, res);
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", (req: Request, res: Response) => {
   handleDeletePost(req, res);
 });
 
-router.put("/:id/like", (req, res) => {
+router.put("/:id/like", (req: Request, res: Response) => {
   togglePostLike(req, res);
 });
 
-router.post("/:id/comment", (req, res) => {
+router.post("/:id/comment", (req: Request, res: Response) => {
   handleAddcomment(req, res);
 });
 
-router.put("/:id/comment/:commentIndex", (req, res) => {
+router.put("/:id/comment/:commentIndex", (req: Request, res: Response) => {
   handleUpdateComment(req, res);
 });
 
-router.delete("/:id/comment/:commentIndex", (req, res) => {
+router.delete("/:id/comment/:commentIndex", (req: Request, res: Response) => {
   handleDeleteComment(req, res);
 });
 
-router.post("/:id/comment/:commentIndex/reply", (req, res) => {
-  handleAddReply(req, res);
-});
+router.post(
+  "/:id/comment/:commentIndex/reply",
+  (req: Request, res: Response) => {
+    handleAddReply(req, res);
+  }
+);
 
-router.put("/:id/comment/:commentIndex/reply/:replyIndex", (req, res) => {
-  handleUpdateReply(req, res);
-});
+router.put(
+  "/:id/comment/:commentIndex/reply/:replyIndex",
+  (req: Request, res: Response) => {
+    handleUpdateReply(req, res);
+  }
+);
 
-router.delete("/:id/comment/:commentIndex/reply/:replyIndex", (req, res) => {
-  handleDeleteReply(req, res);
-});
+router.delete(
+  "/:id/comment/:commentIndex/reply/:replyIndex",
+  (req: Request, res: Response) => {
+    handleDeleteReply(req, res);
+  }
+);
 
 export default router;
